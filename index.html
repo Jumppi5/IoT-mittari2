@@ -1,30 +1,21 @@
-print("<table>")
+<!DOCTYPE html>
+<html>
+<body>
 
+<h1 style="text-align:center;">Temperature and humidity</h1>
 
-print("<th>")
-print("<td>PT100</td>")
-print("<td>Humidity</td>")
-print("<td>DHT temperature</td>")
-print("<td>time</td>")
-print("</th>")
+<div class="inline-div">
+	<p align="center">PT100 Temperature</p>
+</div>
+<div class="inline-div">
+	<p align="center">DHT temperature</p>
+</div>
+<div class="inline-div">
+	<p align="center">Humidity</p>
+</div>
 
-infile = open("mittaukset.csv","r")
-
-for line in infile:
-	row = line.split(",")
-	pt100 = row[0]
-	humid = row[1]
-	DHTtemp = row[2]
-	time = row[3]
-
-	print("<tr>")
-	print("<td>%s</td>" % pt100)
-	print("<td>%s</td>" % humid)
-	print("<td>%s</td>" % DHTtemp)
-	print("<td>%s</td>" % time)
-	print("</tr>")
-
-print("</table>")
+</body>
+</html>
 
 
 
