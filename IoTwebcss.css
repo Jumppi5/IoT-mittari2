@@ -1,18 +1,3 @@
-#text left{
-    /* Added */
-    width: 50%;
-  }
-  
-  #text middle{
-    /* Added */
-    width: 50%;
-  }
-  
-  #text right{
-    /* Added */
-    width: 50%;
-  }
-  
 #PT100 temperature{
 border-left:8px solid #3CB371;
 border-radius:4px;
