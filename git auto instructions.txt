@@ -5,9 +5,9 @@ komennot:
 $ git config --global credential.helper 'store --file ~/.my-credentials'
 $ git credential-store --file ~/git.store store
 protocol=https
-host=mygithost
-username=bob
-password=s3cre7
+host=github.com/Jumppi5/IoT-mittari
+username=Jumppi5
+password=s3cre7 (token)
 (paina enter)
 
 
