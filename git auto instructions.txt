@@ -1,0 +1,13 @@
+Luo token: https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
+Käytä git helperin store komentoa: https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage
+
+komennot:
+$ git config --global credential.helper 'store --file ~/.my-credentials'
+$ git credential-store --file ~/git.store store
+protocol=https
+host=github.com/Jumppi5/IoT-mittari
+username=Jumppi5
+password=s3cre7 (token)
+(paina enter)
+
+
