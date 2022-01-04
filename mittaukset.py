@@ -48,8 +48,10 @@ while True:
 		dateTimeObj = datetime.now()
 		timeObj = dateTimeObj.time()
 		humidity, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 12)
-		humidity = round(humidity, 2)
-		temperature = round(temperature, 2)
+		if type(humidity) == int or type(humidity) == float:
+			humidity = round(humidity, 2)
+		if type(temperature) == int or type(temperature) == float:
+			temperature = round(temperature, 2)
 		with open('mittaukset.csv','a') as f:
 			sys.stdout = f
 			print(str(tempMean)+","+str(humidity)+","+str(temperature)+","+str(timeObj))
