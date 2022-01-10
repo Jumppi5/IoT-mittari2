@@ -47,7 +47,7 @@ while True:
 			time.sleep(1)
 
 		tempMean = statistics.mean(tempList)
-		tempMean = round(tempMean, 2)
+		tempMean = round(tempMean, 1)
 		tempList = []
 
 		date = datetime.date.today()
@@ -55,14 +55,15 @@ while True:
 
 		humidity, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 12)
 		if type(humidity) == int or type(humidity) == float:
-			humidity = round(humidity, 2)
+			humidity = round(humidity, 1)
 		if type(temperature) == int or type(temperature) == float:
-			temperature = round(temperature, 2)
+			temperature = round(temperature, 1)
 
 		with open('mittaukset.csv','a') as f:
                         sys.stdout = f
                         print(str(tempMean)+","+str(humidity)+","+str(temperature)+","+datestr)
                         sys.stdout = sys.stdout #reset standard output
 
-	except Exception as error:
-                logger.exception(error)
+	except OSError:
+                pass
+

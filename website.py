@@ -201,5 +201,5 @@ while True:
         csvtemperature = []
         csvdate = []
 
-    except Exception as error:
-        logger.exception(error)
+    except OSError:
+        pass
