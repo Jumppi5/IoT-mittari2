@@ -90,7 +90,7 @@ while True:
                             x: {
                                 ticks: {
                                     callback: function(val, index) {
-                                    return index % 144 === 0 ? this.getLabelForValue(val) : '';
+                                    return index % 44 === 0 ? this.getLabelForValue(val) : '';
                                     }
                                 }
                             },
