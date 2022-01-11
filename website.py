@@ -90,7 +90,7 @@ while True:
                             x: {
                                 ticks: {
                                     callback: function(val, index) {
-                                    return index % 44 === 0 ? this.getLabelForValue(val) : '';
+                                    return index % 144 === 0 ? this.getLabelForValue(val) : '';
                                     }
                                 }
                             },
@@ -178,7 +178,7 @@ while True:
                             x: {
                                 ticks: {
                                     callback: function(val, index) {
-                                    return index % 144 === 0 ? this.getLabelForValue(val) : '';
+                                    return index % 48 === 0 ? this.getLabelForValue(val) : '';
                                     }
                                 }
                             },
@@ -201,5 +201,5 @@ while True:
         csvtemperature = []
         csvdate = []
 
-    except OSError:
-        pass
+    except Exception as error:
+        logger.exception(error)
