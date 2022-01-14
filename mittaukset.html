@@ -1,0 +1,169 @@
+
+                <!DOCTYPE html>
+                <html>
+                <body style="background-color:#F0F8FF;">
+                <h1 style="text-align:left;">Temperature and humidity </h1>
+
+                <p id = "PT100 temperature" ><b>PT1000 temperature:      28.0 Celsius</b></p>
+                <p id = "DHT temperature" ><b>DHT temperature:  26.4 Celsius</b></p>
+                <p id = "Humidity" ><b>Humidity:        17.7 %RH</b></p>
+                
+                <style type="text/css">
+                    .chart-container {
+                        width: 800px;
+                        height: 400px;
+                    }
+                </style>
+
+                <div class="chart-container" style="background-color:#FFFFFF;">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="chart-container" style="background-color:#FFFFFF;">
+                    <canvas id="myChart2"></canvas>
+                </div>
+                <div class="chart-container" style="background-color:#FFFFFF;">
+                    <canvas id="myChart3"></canvas>
+                </div>
+                
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <script>
+                const ctx = document.getElementById('myChart').getContext('2d');
+                const myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['14.Jan', '14.Jan', '14.Jan', '14.Jan', '14.Jan', '14.Jan', '14.Jan', '14.Jan']
+,
+                        datasets: [{
+                            label: 'PT1000',
+                            data: ['27.9', '27.9', '27.9', '28.0', '27.8', '27.7', '27.7', '28.0']
+,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1,
+                            pointRadius: 0
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            x: {
+                                ticks: {
+                                    callback: function(val, index) {
+                                    return index % 144 === 0 ? this.getLabelForValue(val) : '';
+                                    }
+                                }
+                            },
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+
+                const ctx2 = document.getElementById('myChart2').getContext('2d');
+                const myChart2 = new Chart(ctx2, {
+                    type: 'line',
+                    data: {
+                        labels: ['14.Jan', '14.Jan', '14.Jan', '14.Jan', '14.Jan', '14.Jan', '14.Jan', '14.Jan']
+,
+                        datasets: [{
+                            label: 'Humidity',
+                            data: ['16.7', '16.6', 'None', '16.7', '17.3', '16.7', '16.7', '17.7']
+,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1,
+                            pointRadius: 0
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            x: {
+                                ticks: {
+                                    callback: function(val, index) {
+                                    return index % 144 === 0 ? this.getLabelForValue(val) : '';
+                                    }
+                                }
+                            },
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+
+                const ctx3 = document.getElementById('myChart3').getContext('2d');
+                const myChart3 = new Chart(ctx3, {
+                    type: 'line',
+                    data: {
+                        labels: ['14.Jan', '14.Jan', '14.Jan', '14.Jan', '14.Jan', '14.Jan', '14.Jan', '14.Jan']
+,
+                        datasets: [{
+                            label: 'DHT temperature',
+                            data: ['26.8', '26.7', 'None', '26.4', '27.0', '26.4', '26.0', '26.4']
+,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1,
+                            pointRadius: 0
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            x: {
+                                ticks: {
+                                    callback: function(val, index) {
+                                    return index % 48 === 0 ? this.getLabelForValue(val) : '';
+                                    }
+                                }
+                            },
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+                </script>
+                </body>
+                </html>
