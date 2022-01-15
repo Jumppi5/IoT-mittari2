@@ -18,17 +18,16 @@ csvhumidity = []
 csvtemperature = []
 csvdate = []
 
-while True:
-    try:
-        with open('mittaukset.csv') as f:
-            csvdata = csv.reader(f, delimiter=',')
-            for row in csvdata:
-                csvpt1k.append(row[0])
-                csvhumidity.append(row[1])
-                csvtemperature.append(row[2])
-                csvdate.append(row[3])
+try:
+    with open('mittaukset.csv') as f:
+        csvdata = csv.reader(f, delimiter=',')
+        for row in csvdata:
+            csvpt1k.append(row[0])
+            csvhumidity.append(row[1])
+            csvtemperature.append(row[2])
+            csvdate.append(row[3])
 
-        htmlcode = '''
+    htmlcode = '''
                 <!DOCTYPE html>
                 <html>
                 <body style="background-color:#F0F8FF;">
@@ -90,7 +89,7 @@ while True:
                             x: {
                                 ticks: {
                                     callback: function(val, index) {
-                                    return index % 144 === 0 ? this.getLabelForValue(val) : '';
+                                    return index % 48 === 0 ? this.getLabelForValue(val) : '';
                                     }
                                 }
                             },
@@ -134,7 +133,7 @@ while True:
                             x: {
                                 ticks: {
                                     callback: function(val, index) {
-                                    return index % 144 === 0 ? this.getLabelForValue(val) : '';
+                                    return index % 48 === 0 ? this.getLabelForValue(val) : '';
                                     }
                                 }
                             },
@@ -192,14 +191,14 @@ while True:
                 </body>
                 </html>'''
 
-        f2 = open('mittaukset.html','w')
-        f2.write(htmlcode)
-        f2.close()
+    f2 = open('mittaukset.html','w')
+    f2.write(htmlcode)
+    f2.close()
 
-        csvpt1k = []
-        csvhumidity = []
-        csvtemperature = []
-        csvdate = []
+    csvpt1k = []
+    csvhumidity = []
+    csvtemperature = []
+    csvdate = []
 
-    except Exception as error:
-        logger.exception(error)
+except Exception as error:
+    logger.exception(error)
