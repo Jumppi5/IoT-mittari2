@@ -4,9 +4,9 @@
                 <body style="background-color:#F0F8FF;">
                 <h1 style="text-align:left;">Temperature and humidity </h1>
 
-                <p id = "PT100 temperature" ><b>PT1000 temperature:      27.8 Celsius</b></p>
+                <p id = "PT100 temperature" ><b>PT1000 temperature:      28.0 Celsius</b></p>
                 <p id = "DHT temperature" ><b>DHT temperature:  27.1 Celsius</b></p>
-                <p id = "Humidity" ><b>Humidity:        17.2 %RH</b></p>
+                <p id = "Humidity" ><b>Humidity:        17.0 %RH</b></p>
                 
                 <style type="text/css">
                     .chart-container {
@@ -31,11 +31,11 @@
                 const myChart = new Chart(ctx, {
                     type: 'line',
                     data: {
-                        labels: ['17.Mar', '17.Mar', '17.Mar', '17.Mar', '17.Mar', '17.Mar']
+                        labels: ['17.Mar', '17.Mar', '17.Mar', '17.Mar', '17.Mar', '17.Mar', '17.Mar']
 ,
                         datasets: [{
                             label: 'PT1000',
-                            data: ['27.7', '27.7', '27.7', '27.8', '27.9', '27.8']
+                            data: ['27.7', '27.7', '27.7', '27.8', '27.9', '27.8', '28.0']
 ,
                             backgroundColor: [
                                 'rgba(255, 99, 132, 0.2)',
@@ -77,11 +77,11 @@
                 const myChart2 = new Chart(ctx2, {
                     type: 'line',
                     data: {
-                        labels: ['17.Mar', '17.Mar', '17.Mar', '17.Mar', '17.Mar', '17.Mar']
+                        labels: ['17.Mar', '17.Mar', '17.Mar', '17.Mar', '17.Mar', '17.Mar', '17.Mar']
 ,
                         datasets: [{
                             label: 'Humidity',
-                            data: ['17.3', '16.7', '17.2', 'None', '17.4', '17.2']
+                            data: ['17.3', '16.7', '17.2', 'None', '17.4', '17.2', '17.0']
 ,
                             backgroundColor: [
                                 'rgba(255, 99, 132, 0.2)',
@@ -108,7 +108,7 @@
                             x: {
                                 ticks: {
                                     callback: function(val, index) {
-                                    return index % 48 === 0 ? this.getLabelForValue(val) : '';
+                                    return index % 72 === 0 ? this.getLabelForValue(val) : '';
                                     }
                                 }
                             },
@@ -123,11 +123,11 @@
                 const myChart3 = new Chart(ctx3, {
                     type: 'line',
                     data: {
-                        labels: ['17.Mar', '17.Mar', '17.Mar', '17.Mar', '17.Mar', '17.Mar']
+                        labels: ['17.Mar', '17.Mar', '17.Mar', '17.Mar', '17.Mar', '17.Mar', '17.Mar']
 ,
                         datasets: [{
                             label: 'DHT temperature',
-                            data: ['27.0', '26.8', '27.0', 'None', '27.0', '27.1']
+                            data: ['27.0', '26.8', '27.0', 'None', '27.0', '27.1', '27.1']
 ,
                             backgroundColor: [
                                 'rgba(255, 99, 132, 0.2)',
@@ -154,7 +154,7 @@
                             x: {
                                 ticks: {
                                     callback: function(val, index) {
-                                    return index % 48 === 0 ? this.getLabelForValue(val) : '';
+                                    return index % 72 === 0 ? this.getLabelForValue(val) : '';
                                     }
                                 }
                             },
