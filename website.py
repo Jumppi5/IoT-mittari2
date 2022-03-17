@@ -89,7 +89,7 @@ try:
                             x: {
                                 ticks: {
                                     callback: function(val, index) {
-                                    return index % 48 === 0 ? this.getLabelForValue(val) : '';
+                                    return index % 72 === 0 ? this.getLabelForValue(val) : '';
                                     }
                                 }
                             },
