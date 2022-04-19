@@ -4,7 +4,7 @@ crontab -e:
 */10 * * * * cp /home/pi/mittaukset.html /home/pi/IoT-mittari/ && cp /home/pi/mittaukset.csv /home/pi/IoT-mittari/ && cd /home/pi/IoT-mittari/ && git pull && git add mittaukset.html && git add mittaukset.csv && git commit -m"regular push" && git push
 0 5 */10 * * cd /home/pi/ && rm mittaukset.csv
 
-/home/pi/IoTprojekti/mittaukset3.py
+/home/pi/IoTprojekti/mittaukset4.py
 /home/pi/website.py
 /home/pi/IoT-mittari/
 
