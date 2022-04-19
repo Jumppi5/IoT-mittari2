@@ -1,6 +1,6 @@
 import time
 import statistics
-import datetime
+from datetime import datetime
 import Adafruit_GPIO.SPI as SPI
 import Adafruit_MCP3008
 import Adafruit_DHT
@@ -50,8 +50,8 @@ try:
 	tempMean = round(tempMean, 1)
 	tempList = []
 
-	date = datetime.date.today()
-	datestr = date.strftime("%d.%b")
+	date = datetime.now()
+	datestr = date.strftime("%d.%b %H:%M")
 
 	humidity, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 12)
 	if type(humidity) == int or type(humidity) == float:
