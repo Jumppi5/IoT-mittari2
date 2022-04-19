@@ -88,8 +88,7 @@ try:
                         scales: {
                             x: {
                                 ticks: {
-                                    callback: function(val, index) {
-                                    return index % 72 === 0 ? this.getLabelForValue(val) : '';
+                                        maxTicksLimit: 32
                                     }
                                 }
                             },
@@ -132,8 +131,7 @@ try:
                         scales: {
                             x: {
                                 ticks: {
-                                    callback: function(val, index) {
-                                    return index % 72 === 0 ? this.getLabelForValue(val) : '';
+                                        maxTicksLimit: 32
                                     }
                                 }
                             },
@@ -176,8 +174,7 @@ try:
                         scales: {
                             x: {
                                 ticks: {
-                                    callback: function(val, index) {
-                                    return index % 72 === 0 ? this.getLabelForValue(val) : '';
+                                        maxTicksLimit: 32
                                     }
                                 }
                             },
