@@ -88,8 +88,7 @@ try:
                         scales: {
                             x: {
                                 ticks: {
-                                        maxTicksLimit: 32
-                                    }
+                                	maxTicksLimit: 32
                                 }
                             },
                             y: {
@@ -131,8 +130,7 @@ try:
                         scales: {
                             x: {
                                 ticks: {
-                                        maxTicksLimit: 32
-                                    }
+                                	maxTicksLimit: 32
                                 }
                             },
                             y: {
@@ -174,8 +172,7 @@ try:
                         scales: {
                             x: {
                                 ticks: {
-                                        maxTicksLimit: 32
-                                    }
+                                	maxTicksLimit: 32
                                 }
                             },
                             y: {
