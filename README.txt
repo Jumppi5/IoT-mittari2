@@ -3,10 +3,11 @@ This Github repo contains files for IoT temperature and humidity meter that is b
 Other files are not necessary for the user.
 
 Instructions for reading the website:
-There are two temperatures. PT1000 is the main temperature sensor and DHT temperature is included in the humidity measurement module. 
+There are two temperatures. PT1000 sensor is the one in my own circuitry and DHT temperature is included in the humidity measurement module. DHT temperature is the goto temperature to be read. PT1000 sensor accuracy is not spesified and seems to be worse. 
 
 Sensor accuracies:
 DHT temperature +- 1 Celsius
 DHT humidity +- 3 %RH
 PT1000 not specified.
 
+Measurement data resets every 10 days!
