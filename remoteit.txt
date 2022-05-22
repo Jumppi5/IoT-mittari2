@@ -8,3 +8,5 @@ paina "connect"-nappia
 kirjoita "for pi username" windowsin terminaaliin
 syötä salasana "raspberry" (raspin salasana)
 DONE
+
+ssh -l pi proxyXX.rt3.io -p XXXXX
